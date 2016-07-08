@@ -16,7 +16,7 @@ module Jekyll
       
       if !config['posts']
         postData = []
-        site.posts.each { |post| 
+        site.posts.docs.each { |post| 
           postHash = post.data
           postHash['url'] ||= post.url
           postHash['content'] ||= post.content
